@@ -2,7 +2,6 @@
 						int oldWidth = bm.getWidth();
 						// 其中getPixels中第三个参数要为图片的宽度
 						int[] pixels = new int[oldWidth * oldHeight];// 保存所有的像素的数组，图片宽×高
-
 						bm.getPixels(pixels, 0, oldWidth, 0, 0, oldWidth,
 								oldHeight);
 						// 转化为二维数组,方便计算.
@@ -12,7 +11,6 @@
 								pixels2d[i][j] = pixels[i * oldWidth + j];
 							}
 						}
-
 						int minWidthPixel = oldWidth;// 有像素的最小的x轴的像素值.
 						int maxWidthPixel = 0;// 有像素的最大的x轴的像素值.
 						int minHeightPixel = oldHeight;// 有像素的最小的y轴的像素值.
