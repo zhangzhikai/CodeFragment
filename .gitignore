@@ -1,6 +1,21 @@
-# 此为注释 – 将被 Git 忽略 
-*.a # 忽略所有 .a 结尾的文件 
-!lib.a # 但 lib.a 除外 
-/TODO # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
-build/ # 忽略 build/ 目录下的所有文件 
-doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+#|# 此为注释 – 将被 Git 忽略 
+#|*.a # 忽略所有 .a 结尾的文件 
+#|!lib.a # 但 lib.a 除外 
+#|/TODO # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+#|build/ # 忽略 build/ 目录下的所有文件 
+#|doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+#|#=======
+#|# 忽略*.o和*.a文件
+#|*.[oa]
+#|# 忽略*.b和*.B文件，my.b除外
+#|*.[bB]
+#|!my.b
+#|# 忽略dbg文件和dbg目录
+#|dbg
+#|# 只忽略dbg目录，不忽略dbg文件
+#|dbg/
+#|# 只忽略dbg文件，不忽略dbg目录
+#|dbg
+#|!dbg/
+#|# 只忽略当前目录下的dbg文件和目录，子目录的dbg不在忽略范围内
+#|/dbg
